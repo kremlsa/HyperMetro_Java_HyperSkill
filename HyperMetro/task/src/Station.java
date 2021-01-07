@@ -10,8 +10,6 @@ public class Station {
     public List<String> prev;
     public List<String> next;
     public int time;
-    //public Transfer transfer;
-
 
     public void setPrev(List<String> prev) {
         this.prev = prev;
@@ -61,16 +59,4 @@ public class Station {
         return transfer;
     }
 
-    public String print() {
-        String tr = "";
-        if (transfer != null && transfer.size() > 0) {
-            tr += " - (";
-            for (Transfer t : transfer) {
-                tr += " ; " + t.station + " " + t.line + " line";
-            }
-            tr = tr.replaceFirst(" ; ", "");
-            tr += ")";
-        }
-        return name + tr;
-    }
 }
